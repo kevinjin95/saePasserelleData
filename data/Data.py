@@ -13,7 +13,6 @@ class saeData:
 
     #permet de récupérer les données util présentes sur le fichier excel et les enregistrer dans list
     def recupData(self):
-        print(self.path)
         df = pd.read_excel(self.path, usecols=[self.row2Recup])
         self.list = [i for i in df[self.row2Recup] if str(i) != "nan"]
 
